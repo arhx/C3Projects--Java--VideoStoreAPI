@@ -2,7 +2,7 @@
 
 The overall goal of this project is to create a system that a video store (remember those?) could use to track their inventory of rental videos and their collection of customers.
 
-We will use [NodeJS](https://nodejs.org/en/) to construct a RESTful API. The goal of this API is to quickly serve information about the store's video collection, customer information, and to update rental status. This repository provides two JSON datafiles to serve as the initial seeds for this system.
+We will use [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) to construct a RESTful API. The goal of this API is to quickly serve information about the store's video collection, customer information, and to update rental status. This repository provides two JSON datafiles to serve as the initial seeds for this system.
 
 `movies.json` contains information about the videos available to rent at the store. The data is presented as an array of objects, with each object having the following key-value pairs:
 
@@ -44,51 +44,29 @@ The API you build should have the following capabilities. The schema of your dat
 ### Customers
 - Retrive a list of all customers
 - Retrive a subset of customers
-  - Given a sort column, return _n_ customer records, offset by _p_ records (this will be used to create "pages" of customers)
+  - Given a sort column, return _n_ customer records
   - Sort columns are
     - `name`
     - `registered_at`
     - `postal_code`
-- Given a customer's `id`...
-  - List the movies they _currently_ have checked out
-  - List the movies a customer has checked out in the past
-    - ordered by check out date
-    - includes return date
 
 ### Movies
 - Retrieve a list of all movies
 - Retrieve a subset of movies
-  - Given a sort column, return _n_ movie records, offset by _p_ records (this will be used to create "pages" of movies)
+  - Given a sort column, return _n_ movie records
   - Sort columns are
     - `title`
     - `release_date`
-- Given a movie's `title`...
-  - Get a list of customers that have _currently_ checked out a copy of the film
-  - Get a list of customers that have checked out a copy _in the past_
-    - ordered by customer `id`
-    - ordered by customer `name`
-    - ordered by check out date
-
-### Rental
 - Look a movie up by title to see
-  - it's synopsis
+  - its synopsis
   - release date
   - and inventory total
-- Know if a movie has any inventory available to rent
-- See a list of customers that have _currently_ checked out any of the movie's inventory
-- Given a customer's `id` and a movie's `title` ...
-  - "check out" one of the movie's inventory to the customer
-    - Establish a return date
-    - Charge the customer's account (cost up to you)
-  - "check in" one of customer's rentals
-    - return the movie to its inventory
-- See a list of customers with overdue movies
 
 ### Interface
 - This part of the project is purely an API; all interactions should happen over HTTP requests. There is no front-end, user-facing interface.
 
 ### Testing
 - All endpoints must be tested.
-- We will use [Mocha](https://mochajs.org/) for tests.
+- We will use [JUnit](http://junit.org/) for tests.
 - There isn't a coverage requirement for this project, beyond demonstrating that every endpoint is covered by some manner of tests.
 
