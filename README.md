@@ -30,7 +30,7 @@ We will use [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) to
   - defines the _endpoints_ your API will need
   - the _HTTP verbs_ each endpoint will use
   - and any data that must be provided to the endpoint in order for it to do its work.
-- Create a new Node/Express app to serve as the API.
+- Create a new Java/Spring app to serve as the API.
 - Create a route that responds to `/zomg` that serves a json-encoded "it works!" method.
 - Seed your database using the provided json data.
 
